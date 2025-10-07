@@ -121,6 +121,18 @@
                                                                     &kp LSHFT     &kp SPACE      &mo RSE                         &trans         &trans      &lt ADJ DEL
                          >;
                  };
-
+                    adjust_layer {
+                         // -----------------------------------------------------------------------------------------
+                         // |     BLDR    |             |             |             |             |             |                  |             |             |             |             |             |    BLDR     |
+                         // |     BTCLR   |    BT0      |     BT1     |     BT2     |     BT3     |     BT4     |                  |     BT4     |     BT3     |     BT2     |     BT1     |     BT0     |    BTCLR    |
+                         // |             |             |             |             |             |             |                  |             |             |             |             |             |             |
+                          //                                           |             |             |             |                  |             |             |             |
+                         bindings = <
+                        &bootloader     &none          &none         &none         &none         &none                            &none         &none         &none         &none         &none      &bootloader
+                       &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &bt BT_SEL 4   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bt BT_CLR
+                        &none        &none          &none         &none         &none         &none                            &none         &none         &none         &none         &none         &none
+                                                               &trans        &none         &trans                           &trans        &none         &trans
+                        >;
+               };
         };
 };
