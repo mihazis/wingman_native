@@ -87,10 +87,10 @@
                         // | SHFT |     |     |     |  <  |  >  |   |  ?  |  +  |  [  |  ]  | "|" |  >   |
                         //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-                            &kp  TAB  &kp DE_EXCL &kp DE_DQT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp DE_FSLH  &kp DE_LPAR &kp DE_RPAR &kp DE_EQUAL &kp BSPC
-                            &kp LCTRL &kp RA(N)   &kp PIPE &kp DE_EURO   &kp RA(CARET)   &kp RA(L) &kp RA(LS(N7)) &kp DE_GRAVE &kp RA(N8)  &kp RA(N9)  &kp BSLH &trans
-                            &kp LSHFT &kp CARET   &trans &kp GRAVE &kp LS(GRAVE)  &kp RA(N7) &kp DE_QMARK &kp DE_PLUS  &kp RA(N5)  &kp RA(N6) &kp RA(N7) &studio_unlock
-                                                        &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        &kp LA(TAB)    &kp LEFT      &kp ENTER     &kp RIGHT    &kp LA(N4)    &kp MINUS                          &kp INS      &kp BSPC       &kp DEL      &kp PG_UP     &kp LC(LS(P)) &kp LC(LS(X))
+                        &kp LC(LA(TAB))  &kp LC(A)     &kp PIPE      &kp TAB      &kp LA(F)     &kp LS(FSLH)                       &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT     &kp LS(SEMI)  &kp LC(LS(O))
+                        &kp DEL      &kp GRAVE     &kp LG(X)     &kp LC(INS)  &kp LS(INS)   &kp LA(LSHFT)                       &kp HOME     &kp PG_DN      &kp PG_UP     &kp END     &kp LC(LA(M)) &kp LC(LA(F))
+                                                                         &lt ADJ RET    &trans         &trans                          &mo CSM      &kp ENTER      &kp LS(ENTER)
                         >;
                 };
 
