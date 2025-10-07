@@ -101,12 +101,11 @@
                         // | SHFT |  F11  |  F12   |  F13  |       |       |     |     |     |     |     |     |      |
                         //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-                            &esc_ctrl LCTRL TAB &kp F1  &kp F2  &kp F3  &kp F4  &kp F5       &trans &trans &trans &trans &trans &kp BSPC
-                            &kp ESC &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans &trans &trans &trans &trans &trans
-                            &kp LSHFT &kp F11 &kp F12 &kp F13 &trans  &trans       &trans &trans &trans &trans &trans &trans
-                                                      &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        &kp F1        &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7         &kp F8        &kp F9        &kp F10      &kp F11       &kp F12  
+                        &kp EQUAL      &kp N1         &kp N2        &kp N3        &kp N4        &kp N4                          &kp RA(ENTER)  &kp N7        &kp N8        &kp N9       &kp N0        &kp RA(F)
+                        &kp PLUS       &kp EXCL       &kp AT       &kp RA(C)     &kp RA(V)      &kp RA(B)                       &kp RA(N)      &kp RA(M)   &kp RA(COMMA) &kp RA(DOT)  &kp RA(FSLH)    &kp RA(G)
+                                                               &lt ADJ TAB     &trans        &trans                          &trans         &trans      &lt ADJ DEL
                         >;
-
                 };
         };
 };
