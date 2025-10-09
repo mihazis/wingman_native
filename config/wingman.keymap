@@ -95,9 +95,9 @@
         //                                           |             |             |             |                  |             |             |             |
         bindings = <
             &kp F1        &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7         &kp F8        &kp F9        &kp F10      &kp F11       &kp F12  
-            &kp EQUAL      &kp N1         &kp N2        &kp N3        &kp N4        &kp N4                          &kp RA(ENTER)  &kp N7        &kp N8        &kp N9       &kp N0        &kp RA(F)
+            &kp EQUAL      &kp N1         &kp N2        &kp N3        &kp N4        &kp N4                          &kp RA(ENTER)  &tog GAM        &kp N8        &kp N9       &kp N0        &kp RA(F)
             &kp PLUS       &kp EXCL       &kp AT       &kp RA(C)     &kp RA(V)      &kp RA(B)                       &kp RA(N)      &kp RA(M)   &kp RA(COMMA) &kp RA(DOT)  &kp RA(FSLH)    &kp RA(G)
-                                                       &lt ADJ TAB     &trans        &trans                          &trans         &trans      &lt ADJ DEL
+                                                       &lt ADJ TAB     &trans       &mo RSE                         &mo LWR         &trans      &lt ADJ DEL
                    >;
                 };
 
@@ -108,10 +108,10 @@
         // |      +      |      !      |      @      |      #      |      $      |      %      |                  |      ^      |      &      |      *      |      (      |      )      |      -      |
         //                                           |     GUI     |             |     SPC     |                  |     ENT     |             |     ALT     |
         bindings = <
-            &kp ESC          &kp M         &kp Q         &kp W         &kp R         &kp T                        &kp F7         &kp F8        &kp F9        &kp F10        &kp F11       &tog GAM  
+            &kp ESC          &kp M         &kp Q         &kp W         &kp R         &kp T                        &kp F7         &kp F8        &kp F9        &kp F10        &kp F11       &tog DEF
             &kp LGUI         &kp T         &kp A         &kp S         &kp D         &kp G                        &kp RA(ENTER)  &kp N7        &kp N8        &kp N9         &kp N0        &tog RSE
             &kp LCTRL        &kp Z         &kp X         &kp C         &kp V         &kp B                        &kp RA(N)      &kp RA(M)   &kp RA(COMMA)  &kp RA(DOT)  &kp RA(FSLH)     &tog DEF
-                                                        &kp LSHFT     &kp SPACE      &mo RSE                         &trans         &trans      &lt ADJ DEL
+                                                        &kp LSHFT     &kp SPACE      &mo RSE                      &mo LWR         &trans      &lt ADJ DEL
                    >;
                 };
                 adjust_layer {
