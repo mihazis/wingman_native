@@ -17,22 +17,20 @@
 #define GAM 4
 #define ADJ 5
 
-
 &lt {
     tapping-term-ms = <300>;
 };
 
 / {
-      behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RBKT>, <&kp EQUAL>, <&kp PLUS>;
+        behaviors {
+            td0: tap_dance_0 {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp RBKT>, <&kp EQUAL>, <&kp PLUS>;
+            };
         };
-    };
 
-    
         combos {
             compatible = "zmk,combos";
     
@@ -49,17 +47,17 @@
                 compatible = "zmk,keymap";
 	
                 default_layer {
-                        // -----------------------------------------------------------------------------------------
-                        // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-                        // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-                        // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-                        //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-                            &kp ESC          &kp Q         &kp W         &kp E         &kp R         &kp T                            &kp Y         &kp U          &kp I       &kp O          &kp P        &kp LBKT
-                            &kp LGUI         &kp A         &kp S         &kp D         &kp F         &kp G                            &kp H         &kp J          &kp K       &kp L         &kp SEMI      &kp SQT
-                            &kp LCTRL        &kp Z         &kp X         &kp C         &kp V         &kp B                            &kp N         &kp M        &kp COMMA    &kp DOT        &kp FSLH      &td0           
-                                                                        &kp LSHFT     &kp SPACE      &mo RSE                          &mo LWR       &kp BSPC      &kp RSHFT
-                        >;
+//      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // |    ESC      |      Q      |      W      |      E      |      R      |      T      |                  |      Y      |      U      |      I      |      O      |      P      |      [      |
+        // |    LGUI     |      A      |      S      |      D      |      F      |      G      |                  |      H      |      J      |      K      |      L      |      ;      |      '      |
+        // |    LCTL     |      Z      |      X      |      C      |      V      |      B      |                  |      N      |      M      |      ,      |      .      |      /      |      ]      |
+        //                                           |     SHFT    |    SPACE    |     RSE     |                  |     LWR     |     BSPC    |     SHFT    |
+        bindings = <
+            &kp ESC          &kp Q         &kp W         &kp E         &kp R         &kp T                            &kp Y         &kp U          &kp I       &kp O          &kp P        &kp LBKT
+            &kp LGUI         &kp A         &kp S         &kp D         &kp F         &kp G                            &kp H         &kp J          &kp K       &kp L         &kp SEMI      &kp SQT
+            &kp LCTRL        &kp Z         &kp X         &kp C         &kp V         &kp B                            &kp N         &kp M        &kp COMMA    &kp DOT        &kp FSLH      &td0           
+                                                        &kp LSHFT     &kp SPACE      &mo RSE                          &mo LWR       &kp BSPC      &kp RSHFT
+                   >;
                 };
                 lower_layer {
                         // -----------------------------------------------------------------------------------------
