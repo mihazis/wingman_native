@@ -15,7 +15,8 @@
 #define RSE 2
 #define CSM 3
 #define GAM 4
-#define ADJ 5
+#define GAL 5
+#define ADJ 6
 
 &lt {
     tapping-term-ms = <300>;
@@ -80,9 +81,9 @@
         // |             |      ~      |     Win+x   |  Ctrl+Ins   |  Shift+Ins  |     A+S     |                  |     HOME    |     PGDN    |     PGUP    |      END    |     PAUS    |             |
         //                                           |     ADJ     |             |             |                  | Custom Layer|             |             |
         bindings = <
-            &kp LA(TAB)    &kp LEFT      &kp ENTER     &kp RIGHT    &kp LA(N4)    &kp MINUS                        &kp INS       &kp BSPC       &kp DEL      &kp PG_UP     &kp LC(LS(P)) &kp LC(LS(X))
-            &kp LC(LA(TAB))  &kp LC(A)     &kp PIPE      &kp TAB      &kp LA(F)     &kp LS(FSLH)                   &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT     &kp LS(SEMI)  &kp LC(LS(O))
-            &kp DEL      &kp GRAVE     &kp LG(X)     &kp LC(INS)  &kp LS(INS)   &kp LA(LSHFT)                      &kp HOME      &kp PG_DN      &kp PG_UP    &kp END       &kp LC(LA(M)) &kp LC(LA(F))
+            &kp LA(TAB)    &kp LEFT      &kp ENTER     &kp RIGHT    &kp LA(N4)    &kp MINUS                        &kp INS       &kp BSPC       &kp DEL      &kp PG_UP     &trans          &tog GAM
+            &kp LC(LA(TAB))  &kp LC(A)     &kp PIPE      &kp TAB      &kp LA(F)     &kp LS(FSLH)                   &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT     &trans          &tog GAL
+            &kp DEL      &kp GRAVE     &kp LG(X)     &kp LC(INS)  &kp LS(INS)   &kp LA(LSHFT)                      &kp HOME      &kp PG_DN      &kp PG_UP    &kp END       &trans          &trans
                                                      &lt ADJ RET    &trans         &trans                          &mo CSM       &kp ENTER      &kp LS(ENTER)
                    >;
                 };
@@ -103,14 +104,28 @@
 
                 game_layer {
         // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // |      F1     |      F2     |      F3     |      F4     |      F5     |      F6     |                  |      F7     |      F8     |      F9     |     F10     |     F11     |   &tog GAM  |
-        // |      =      |      1      |      2      |      3      |      4      |      5      |                  |      6      |      7      |      8      |      9      |      0      |     A+F     |
-        // |      +      |      !      |      @      |      #      |      $      |      %      |                  |      ^      |      &      |      *      |      (      |      )      |      -      |
-        //                                           |     GUI     |             |     SPC     |                  |     ENT     |             |     ALT     |
+        // |      1      |             |             |             |             |             |                  |             |             |             |             |             |             |
+        // |             |             |             |             |             |             |                  |             |             |             |             |             |             |
+        // |             |             |             |             |             |             |                  |             |             |             |             |             |             |
+        //                                           |             |             |             |                  |             |             |             |
         bindings = <
-            &kp ESC          &kp M         &kp Q         &kp W         &kp R         &kp T                        &kp F7         &kp F8        &kp F9        &kp F10        &kp F11       &tog DEF
-            &kp LGUI         &kp T         &kp A         &kp S         &kp D         &kp G                        &kp RA(ENTER)  &kp N7        &kp N8        &kp N9         &kp N0        &tog RSE
-            &kp LCTRL        &kp Z         &kp X         &kp C         &kp V         &kp B                        &kp RA(N)      &kp RA(M)   &kp RA(COMMA)  &kp RA(DOT)  &kp RA(FSLH)     &tog DEF
+            &kp N1          &kp M         &kp Q         &kp W         &kp R         &kp T                        &kp F7         &kp F8        &kp F9        &kp F10        &kp F11        &tog GAM
+            &kp LGUI         &kp T         &kp A         &kp S         &kp D         &kp G                        &kp RA(ENTER)  &kp N7        &kp N8        &kp N9         &kp N0        &trans
+            &kp LCTRL        &kp Z         &kp X         &kp C         &kp V         &kp B                        &kp RA(N)      &kp RA(M)   &kp RA(COMMA)  &kp RA(DOT)  &kp RA(FSLH)     &trans
+                                                        &kp LSHFT     &kp SPACE      &mo RSE                      &mo LWR         &trans      &lt ADJ DEL
+                   >;
+                };
+
+                game_layer2 {
+        // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // |      2      |             |             |             |             |             |                  |             |             |             |             |             |             |
+        // |             |             |             |             |             |             |                  |             |             |             |             |             |             |
+        // |             |             |             |             |             |             |                  |             |             |             |             |             |             |
+        //                                           |             |             |             |                  |             |             |             |
+        bindings = <
+            &kp N2          &kp M         &kp Q         &kp W         &kp R         &kp M                          &kp F7         &kp F8        &kp F9        &kp F10        &kp F11       &trans
+            &kp F1          &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                        &kp RA(ENTER)  &kp N7        &kp N8        &kp N9         &kp N0        &tog GAL
+            &kp F7        &kp F8         &kp F9        &kp F10        &kp F11        &kp F12                       &kp RA(N)      &kp RA(M)   &kp RA(COMMA)  &kp RA(DOT)  &kp RA(FSLH)     &trans
                                                         &kp LSHFT     &kp SPACE      &mo RSE                      &mo LWR         &trans      &lt ADJ DEL
                    >;
                 };
